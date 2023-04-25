@@ -85,17 +85,17 @@ def socialMedia():
     return render_template('social-media.html', **locals())
 
 
-@app.route('/business-pitch', methods=["GET", "POST"])
-def businessPitch():
+@app.route('/linkedIn-post', methods=["GET", "POST"])
+def linkedInpost():
 
     if request.method == 'POST':
-        query = request.form['businessPitch']
+        query = request.form['linkedInpost']
         print(query)
 
         prompt = 'AI Suggestions for {} are:'.format(query)
         openAIAnswer = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
-    return render_template('business-pitch.html', **locals())
+    return render_template('linkedIn-post.html', **locals())
 
 
 @app.route('/video-ideas', methods=["GET", "POST"])
