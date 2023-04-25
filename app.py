@@ -85,7 +85,7 @@ def socialMedia():
     return render_template('social-media.html', **locals())
 
 
-@app.route('/linkedIn-post', methods=["GET", "POST"])
+@app.route('/linkedin-post', methods=["GET", "POST"])
 def linkedInpost():
 
     if request.method == 'POST':
